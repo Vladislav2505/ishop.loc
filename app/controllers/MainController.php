@@ -11,7 +11,7 @@ class MainController extends Controller
     {
         $this->setMeta('Главная', 'Description', 'keywords');
         $names = $this->model->getNames();
-        echo 'Vlad';
+
         $this->setData(compact('names'));
     }
 }
