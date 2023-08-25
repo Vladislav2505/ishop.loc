@@ -3,6 +3,7 @@
 namespace core;
 
 use Exception;
+use RedBeanPHP\R;
 
 class View
 {
@@ -56,5 +57,34 @@ class View
         return '<title>' . h($this->meta['title']) . '</title>' . PHP_EOL .
             '<meta name="description" content="' . h($this->meta['description']) . '">' . PHP_EOL .
             '<meta name="keywords" content="' . h($this->meta['keywords']) . '">' . PHP_EOL;
+    }
+
+
+    public function getDbLogs(): void
+    {
+        if (DEBUG) {
+            $logs = R::getDatabaseAdapter()
+                ->getDatabase()
+                ->getLogger();
+
+            $logs = array_merge($logs->grep('SELECT'), $logs->grep('INSERT'), $logs->grep('UPDATE'),
+                $logs->grep('DELETE'));
+            debug($logs);
+        }
+    }
+
+    public function getPart(string $file, array $data = null): void
+    {
+        if (is_array($data)) {
+            extract($data);
+        }
+
+        $file = APP . "/views/parts/{$file}.php";
+
+        if (is_file($file)) {
+            require $file;
+        } else {
+            echo "Файл {$file} не найден";
+        }
     }
 }
