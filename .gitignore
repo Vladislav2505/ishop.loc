@@ -2,3 +2,4 @@ vendor/composer
 vendor/autoload.php
 vendor/gabordemooij
 tmp/logs/errors.log
+.idea

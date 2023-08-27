@@ -16,7 +16,9 @@ class Db
     {
         $db = require_once CONFIG . '/config_db.php';
 
-        R::setup($db['dsn'], $db['user'], $db['password']);
+        if(!R::testConnection()){
+            R::setup($db['dsn'], $db['user'], $db['password']);
+        }
 
         if (!R::testConnection()) {
             throw new Exception('Нет подключения к БД', 500);

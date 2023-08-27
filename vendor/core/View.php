@@ -33,7 +33,7 @@ class View
         $prefix = str_replace('\\', '/', $this->route['admin_prefix']);
         $viewFile = APP . "/views/{$prefix}{$this->route['controller']}/{$this->view}.php";
 
-        if (file_exists($viewFile)) {
+        if (is_file($viewFile)) {
             ob_start();
             require_once $viewFile;
             $this->content = ob_get_clean();
