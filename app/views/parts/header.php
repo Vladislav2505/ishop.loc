@@ -22,7 +22,7 @@
             <div class="row justify-content-between">
                 <div class="col">
                     <a href="tel:5551234567">
-                        <span class="icon-phone">&#9743;</span> 555 123-45-67
+                        <span class="icon-phone">&#9743;</span> 995 399-30-34
                     </a>
                 </div>
                 <div class="col text-end icons">
@@ -76,7 +76,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid p-0">
-                    <a class="navbar-brand" href="index.html">Shop Brand</a>
+                    <a class="navbar-brand" href="/"><?=\core\App::$app->getProperty('site_name')?></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">

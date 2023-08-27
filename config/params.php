@@ -2,6 +2,6 @@
 
 return [
     'admin_email' => 'admin@ishop.loc',
-    'site_name' => 'E-Shop',
+    'site_name' => 'i-Shop',
     'pagination' => 3,
 ];

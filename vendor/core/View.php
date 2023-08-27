@@ -54,7 +54,7 @@ class View
 
     public function getMeta(): string
     {
-        return '<title>' . h($this->meta['title']) . '</title>' . PHP_EOL .
+        return '<title>' . App::$app->getProperty('site_name') . ' :: ' . h($this->meta['title']) . '</title>' . PHP_EOL .
             '<meta name="description" content="' . h($this->meta['description']) . '">' . PHP_EOL .
             '<meta name="keywords" content="' . h($this->meta['keywords']) . '">' . PHP_EOL;
     }
@@ -63,13 +63,13 @@ class View
     public function getDbLogs(): void
     {
         if (DEBUG) {
-            $logs = R::getDatabaseAdapter()
-                ->getDatabase()
-                ->getLogger();
+                $logs = R::getDatabaseAdapter()
+                    ->getDatabase()
+                    ->getLogger();
 
-            $logs = array_merge($logs->grep('SELECT'), $logs->grep('INSERT'), $logs->grep('UPDATE'),
-                $logs->grep('DELETE'));
-            debug($logs);
+                $logs = array_merge($logs->grep('SELECT'), $logs->grep('INSERT'), $logs->grep('UPDATE'),
+                    $logs->grep('DELETE'));
+                debug($logs);
         }
     }
 

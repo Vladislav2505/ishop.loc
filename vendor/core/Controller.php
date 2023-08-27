@@ -7,7 +7,7 @@ use Exception;
 abstract class Controller
 {
     protected array $data = [];
-    protected array $meta = [];
+    protected array $meta = ['title' => '', 'description' => '', 'keywords' => ''];
     protected string|false $layout = '';
     protected string $view = '';
     protected object $model;
