@@ -65,3 +65,13 @@ function post(string $key, string $type = 's')
         return trim($param);
     }
 }
+
+function __(string $str): void
+{
+    echo \core\Language::get($str);
+}
+
+function ___(string $str): string
+{
+    return \core\Language::get($str);
+}
