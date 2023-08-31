@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Main;
 use core\App;
+use core\Cache;
 use core\Controller;
 use core\Language;
 use RedBeanPHP\R;
