@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Main;
+use app\widgets\menu\Menu;
 use core\App;
 use core\Cache;
 use core\Controller;
