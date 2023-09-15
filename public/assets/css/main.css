@@ -297,11 +297,15 @@ li a.dropdown-item:focus, li a.dropdown-item:hover {
     margin-right: 5px;
 }
 
+.cart-table img {
+	max-height: 50px;
+}
+
 .product-links a {
     font-size: 20px;
     margin-left: 10px;
 }
-/* Product card */
+/* Product card */ 
 
 /* Services */
 .service-item {

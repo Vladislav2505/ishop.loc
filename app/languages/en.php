@@ -2,8 +2,21 @@
 
 return [
     'tpl_search' => 'Search...',
-    'tp;_login' => 'Authorization',
+    'tpl_login' => 'Authorization',
     'tpl_signup' => 'Registration',
+
+    'tpl_cart_title' => 'Basket',
+    'tpl_cart_photo' => 'Photo',
+    'tpl_cart_product' => 'Product',
+    'tpl_cart_qty' => 'Qty',
+    'tpl_cart_price' => 'Price',
+    'tpl_cart_total_qty' => 'Total: ',
+    'tpl_cart_sum' => 'Sum: ',
+    'tpl_cart_btn_continue' => 'Continue shopping',
+    'tpl_cart_btn_order' => 'Checkout',
+    'tpl_cart_btn_clear' => 'Clear basket',
+    'tpl_cart_empty' => 'Empty basket',
+
     'tpl_information' => 'Information',
     'tpl_opening_hours' => 'Opening hours',
     'tpl_contacts' => 'Contacts',

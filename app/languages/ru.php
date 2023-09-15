@@ -2,8 +2,21 @@
 
 return [
     'tpl_search' => 'Поиск...',
-    'tp;_login' => 'Авторизация',
+    'tpl_login' => 'Авторизация',
     'tpl_signup' => 'Регистрация',
+
+    'tpl_cart_title' => 'Корзина',
+    'tpl_cart_photo' => 'Фото',
+    'tpl_cart_product' => 'Товар',
+    'tpl_cart_qty' => 'Кол-во',
+    'tpl_cart_price' => 'Цена',
+    'tpl_cart_total_qty' => 'Итого: ',
+    'tpl_cart_sum' => 'Сумма: ',
+    'tpl_cart_btn_continue' => 'Продолжить покупки',
+    'tpl_cart_btn_order' => 'Оформить заказ',
+    'tpl_cart_btn_clear' => 'Очистить корзину',
+    'tpl_cart_empty' => 'Корзина пуста',
+
     'tpl_information' => 'Информация',
     'tpl_opening_hours' => 'Время работы',
     'tpl_contacts' => 'Контакты',

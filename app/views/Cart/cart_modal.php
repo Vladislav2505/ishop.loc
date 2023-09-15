@@ -4,10 +4,11 @@
             <table class="table text-start">
                 <thead>
                 <tr>
-                    <th scope="col">Фото</th>
-                    <th scope="col">Товар</th>
-                    <th scope="col">Кол-во</th>
-                    <th scope="col">Цена</th>
+                    <th scope="col"><?=___('tpl_cart_photo')?></th>
+                    <th scope="col"><?=___('tpl_cart_product')?></th>
+                    <th scope="col"><?=___('tpl_cart_qty')?></th>
+                    <th scope="col"><?=___('tpl_cart_price')?></th>
+                    <th scope="col"><i class="far fa-trash-alt"></i></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -21,21 +22,30 @@
                         <td><a href="product/<?= $item['slug'] ?>"><?= $item['title'] ?></a></td>
                         <td><?= $item['qty'] ?></td>
                         <td><?= $item['price'] ?></td>
+                        <td><a href="cart/delete?id=<?= $k ?>"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 <?php endforeach; ?>
+                <tr>
+                    <td colspan="4" class="text-end"><?= ___('tpl_cart_total_qty')?></td>
+                    <td class="cart-qty"><?=$_SESSION['cart_qty']?></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="text-end"><?= ___('tpl_cart_sum')?></td>
+                    <td class="cart-price"><?=$_SESSION['cart_price']?></td>
+                </tr>
                 </tbody>
             </table>
         </div>
     <?php else: ?>
-        <h4>Empty Cart</h4>
+        <h4><?=___('tpl_cart_empty')?></h4>
     <?php endif; ?>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-danger ripple" data-bs-dismiss="modal">
-        Продолжить покупки
+    <button type="button" class="btn btn-success ripple" data-bs-dismiss="modal">
+        <?=___('tpl_cart_btn_continue')?>
     </button>
     <?php if (!empty($_SESSION['cart'])): ?>
-        <button type="button" class="btn btn-primary">Оформить заказ</button>
-        <button type="button" class="btn btn-primary">Очистить корзину</button>
+        <button type="button" class="btn btn-primary"><?=___('tpl_cart_btn_order')?></button>
+        <button type="button" class="btn btn-danger"><?=___('tpl_cart_btn_clear')?></button>
     <?php endif; ?>
 </div>

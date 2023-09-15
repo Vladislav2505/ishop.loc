@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Cart;
 use core\App;
+use JetBrains\PhpStorm\NoReturn;
 
 /** @property Cart $model */
 class CartController extends AppController
@@ -29,5 +30,10 @@ class CartController extends AppController
         }
 
         redirect();
+    }
+
+    #[NoReturn] public function showAction(): void
+    {
+        $this->loadView('cart_modal');
     }
 }

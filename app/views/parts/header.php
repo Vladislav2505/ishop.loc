@@ -11,7 +11,7 @@
           integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= PATH ?>/assets/css/main.css">
-    <link rel="icon" type="image/pnh" sizes="32x32" href="<?= PATH ?>/assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= PATH ?>/assets/img/favicon.png">
     <?= $this->getMeta() ?>
 </head>
 <body>
@@ -35,9 +35,9 @@
                     </form>
                     <a href="#" class="open-search"><i class="fas fa-search"></i></a>
 
-                    <a href="#" class="relative" data-bs-toggle="modal" data-bs-target="#cart-modal">
+                    <a href="#" id="get-cart" class="relative" data-bs-toggle="modal" data-bs-target="#cart-modal">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="badge bg-danger rounded-pill count-items">0</span>
+                        <span class="badge bg-danger rounded-pill count-items"><?=$_SESSION['cart_qty'] ?? 0?></span>
                     </a>
 
                     <a href="#"><i class="far fa-heart"></i></a>
@@ -47,8 +47,8 @@
                             <i class="far fa-user"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Авторизация</a></li>
-                            <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                            <li><a class="dropdown-item" href="#"><?=___('tpl_login')?></a></li>
+                            <li><a class="dropdown-item" href="#"><?=___('tpl_signup')?></a></li>
                         </ul>
                     </div>
 
